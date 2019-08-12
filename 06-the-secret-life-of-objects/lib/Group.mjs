@@ -1,3 +1,4 @@
+// GROUP
 export default class Group {
   constructor(...args) {
     this.items = args;
@@ -17,5 +18,22 @@ export default class Group {
 
   static from(args) {
     return new Group(...args);
+  }
+}
+
+// GROUP ITERATOR
+export class GroupIterator {
+  constructor(group) {
+    this.itemIndex = 0;
+    this.group = group;
+  }
+
+  next() {
+    if (this.itemIndex > this.group.items.length - 1) return { done: true };
+
+    let value = this.group.items[this.itemIndex];
+    this.itemIndex += 1;
+
+    return { value, done: false };
   }
 }
