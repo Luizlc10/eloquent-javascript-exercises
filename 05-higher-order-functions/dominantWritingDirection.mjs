@@ -1,4 +1,4 @@
-import SCRIPTS from './SCRIPTS';
+import SCRIPTS from './lib/scripts';
 
 function characterScript(code) {
   for (let script of SCRIPTS) {

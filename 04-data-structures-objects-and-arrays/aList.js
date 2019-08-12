@@ -41,7 +41,7 @@ function nth(list, position) {
   return list.value;
 }
 
-console.log(JSON.stringify(arrayToList([10, 20, 3, 4, 5, 6, 7, 8, 9]), undefined, "     "));
+console.log(JSON.stringify(arrayToList([10, 20]), undefined, "     "));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([10, 20, 30])));
 // → [10, 20, 30]
